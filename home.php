@@ -3,6 +3,15 @@
 	<div id="primary" class="site-content home">
 		<section id="home-gallery">
 			<?php get_template_part('content-gallery'); ?>
+
+			<?php
+			$galleryurl= get_post_meta(get_the_ID(), 'lk_hello_gallery_url', TRUE);
+			?>
+
+		    <div id="video-overlay">
+				<iframe id="hello-video" frameborder="0" hspace="0" scrolling="auto" src="<?php echo $galleryurl;?>"</iframe>
+			</div>
+			
 		</section><!-- #home-gallery -->
 		
 		<section id="mission-statement" class="content">

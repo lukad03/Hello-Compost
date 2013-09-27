@@ -16,10 +16,6 @@
      
      <?php if($buttontxt != ''||$buttonurl != ''){ ?>
 
-     <?php if($buttonurl != ''){ ?>
-          <?php video_embed($galleryurl);?>
-     <?php }?>
-
       <div class="flex-caption main-caption">
       	<h1 class="fadeInUpBig animated"><?php the_title();?></h1>
       		<div id="play-<?php the_ID(); ?>" class="fadeInUpBig animated fadein <?php if($buttonurl != ''){?>button-video<?php }else{?>button-gallery<?php };?>">
@@ -29,6 +25,9 @@
       <?php }?>
 
     </li>
+    <div id="video-overlay">
+    <iframe id="hello-video" frameborder="0" hspace="0" scrolling="auto" src="<?php echo $galleryurl;?>"</iframe>
+    </div>
     <?php endwhile; ?>
     <?php wp_reset_query(); ?>
   </ul>

@@ -55,6 +55,7 @@ function ready(player_id) {
     var froogaloop = $f(player_id);
     froogaloop.addEvent('play', function(data) {
      $('#main-gallery').flexslider("pause");
+     $('#press-gallery').flexslider("pause");
     });
 
     froogaloop.addEvent('pause', function(data) {
@@ -98,9 +99,11 @@ function controlSlider(event) {
     console.log(playerstate);
     if(playerstate==1 || playerstate==3){
         $('#main-gallery').flexslider("pause");
+        $('#press-gallery').flexslider("pause");
     };
     if(playerstate==0 || playerstate==2){
         $('#main-gallery').flexslider("play");
+        $('#press-gallery').flexslider("play");
     };
 };
 
